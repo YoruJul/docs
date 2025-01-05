@@ -20,6 +20,15 @@
       "pages": [
         "getting-started"
       ]
+    },
+    {
+      "group": "Security Setup",
+      "pages": [
+        "security/antinuke",
+        "security/antiraid",
+        "security/moderation",
+        "security/fake-permissions"
+      ]
     }
   ]
 }
