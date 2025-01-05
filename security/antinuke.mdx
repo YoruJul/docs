@@ -16,7 +16,7 @@ The antinuke will set a limit on the number of actions a moderator can perform i
 
 <Warning>
   Discord recently implemented a new **mass ban** feature which can quickly ban
-  **100+ members**. It's **HIGHLY** recommended to utilizie [fake
+  **100+ members**. It's **HIGHLY** recommended to utilize [fake
   permissions](/security/fake-permissions) to prevent moderators from using this
   feature.
 </Warning>
@@ -31,14 +31,13 @@ Initially, only the **server owner** can configure the antinuke. However, you ca
 </Warning>
 
 <CodeGroup>
-```javascript Syntax
+```javascript
+// Syntax
 ,antinuke admin <add/remove> <@user>
-```
 
-```javascript Example
+// Example
 ,antinuke admin add @xrm0s
 ```
-
 </CodeGroup>
 <br />
 <Frame>
@@ -53,15 +52,15 @@ You can exempt users from the antinuke with the `antinuke whitelist` command.
   This is a dangerous command and will allow the user to bypass the antinuke
   entirely.
 </Warning>
-<CodeGroup>
-```javascript Syntax
-,antinuke whitelist <add/remove> <@user>
-```
 
-```javascript Example
+<CodeGroup>
+```javascript
+// Syntax
+,antinuke whitelist <add/remove> <@user>
+
+// Example
 ,antinuke whitelist add <@user>
 ```
-
 </CodeGroup>
 <br />
 <Frame>
@@ -72,114 +71,124 @@ You can exempt users from the antinuke with the `antinuke whitelist` command.
 
 ### Available Flags
 
-The following flags can be used to define the antinuke module
+The following flags can be used to define the antinuke module:
 
-    <Accordion title="Punishment">
-        The punishment which will be applied to the moderator.
-        <Info>Available punishments can be found in the [punishments](/resources/syntax#flag-punishments) section.</Info>
-        <CodeGroup>
-        ```javascript Syntax
-        ,antinuke ban enable (punishment)
-        ```
+#### Punishment
 
-        ```javascript Example
-        ,antinuke ban enable timeout
-        ```
-        </CodeGroup>
-    </Accordion>
-</AccordionGroup>
+The punishment which will be applied to the moderator.
+
+> **Available punishments can be found in the [punishments](/resources/syntax#flag-punishments) section.**
+
+<CodeGroup>
+```javascript
+// Syntax
+,antinuke ban enable (punishment)
+
+// Example
+,antinuke ban enable timeout
+```
+</CodeGroup>
 
 ### Available Modules
 
 <AccordionGroup>
     <Accordion title="Bot Protection">
-        Control bot additions to your server
-        
+        Control bot additions to your server.
+
         <Info>Use `antinuke whitelist add/remove <userID>` to manage trusted users.</Info>
+
         <CodeGroup>
-        ```javascript Syntax
+        ```javascript
+        // Syntax
         ,antinuke bot <enable/disable>
-        ```
-        ```javascript Example
+
+        // Example
         ,antinuke bot enable
         ```
         </CodeGroup>
     </Accordion>
 
     <Accordion title="Ban Protection">
-        Prevent mass banning of members
-        
+        Prevent mass banning of members.
+
         <CodeGroup>
-        ```javascript Syntax
+        ```javascript
+        // Syntax
         ,antinuke ban <enable/disable>
-        ```
-        ```javascript Example
+
+        // Example
         ,antinuke ban enable
         ```
         </CodeGroup>
     </Accordion>
 
     <Accordion title="Channel Protection">
-        Prevent unauthorized channel modifications
-        
+        Prevent unauthorized channel modifications.
+
         <CodeGroup>
-        ```javascript Syntax
+        ```javascript
+        // Syntax
         ,antinuke channel <enable/disable>
-        ```
-        ```javascript Example
+
+        // Example
         ,antinuke channel enable
         ```
         </CodeGroup>
     </Accordion>
 
     <Accordion title="Role Protection">
-        Prevent role deletions and modifications
-        
+        Prevent role deletions and modifications.
+
         <CodeGroup>
-        ```javascript Syntax
+        ```javascript
+        // Syntax
         ,antinuke role <enable/disable>
-        ```
-        ```javascript Example
+
+        // Example
         ,antinuke role enable
         ```
         </CodeGroup>
     </Accordion>
 
     <Accordion title="Webhook Protection">
-        Control webhook creation and modification
-        
+        Control webhook creation and modification.
+
         <CodeGroup>
-        ```javascript Syntax
+        ```javascript
+        // Syntax
         ,antinuke webhook <enable/disable>
-        ```
-        ```javascript Example
+
+        // Example
         ,antinuke webhook enable
         ```
         </CodeGroup>
     </Accordion>
 
     <Accordion title="Whitelist Management">
-        Manage trusted users
-        
-        <Info>Whitelisted users bypass antinuke checks</Info>
+        Manage trusted users.
+
+        <Info>Whitelisted users bypass antinuke checks.</Info>
+
         <CodeGroup>
-        ```javascript Syntax
+        ```javascript
+        // Syntax
         ,antinuke whitelist <add/remove/list> [userID]
-        ```
-        ```javascript Example
+
+        // Example
         ,antinuke whitelist add 123456789
         ```
         </CodeGroup>
     </Accordion>
 
     <Accordion title="Reset Configuration">
-        Reset all antinuke settings
-        
+        Reset all antinuke settings.
+
         <CodeGroup>
-        ```javascript Syntax
+        ```javascript
+        // Syntax
         ,antinuke reset
-        ```
-        ```javascript Example
+
+        // Example
         ,antinuke reset
         ```
         </CodeGroup>
@@ -201,3 +210,4 @@ You can use the `antinuke list` command to view the enabled modules and whitelis
 ### Viewing users with antinuke admin
 
 You can use the `antinuke admins` command to view users which can configure the antinuke.
+
